@@ -39,10 +39,6 @@ class AccessibilityElement {
         return array.map { AccessibilityElement($0) }
     }
     
-    private var role: NSAccessibility.Role? {
-        guard let value = wrappedElement.getValue(.role) as? String else { return nil }
-        return NSAccessibility.Role(rawValue: value)
-    }
     
     private var isApplication: Bool? {
         guard let role = role else { return nil }
@@ -77,6 +73,26 @@ class AccessibilityElement {
     var isStaticText: Bool? {
         guard let role = role else { return nil }
         return role == .staticText
+    }
+    
+    var isButton: Bool? {
+        guard let role = role else { return nil }
+        return role == .button
+    }
+    
+    var isImage: Bool? {
+        guard let role = role else { return nil }
+        return role == .image
+    }
+    
+    var isUnknown: Bool? {
+        guard let role = role else { return nil }
+        return role == .unknown
+    }
+    
+    var role: NSAccessibility.Role? {
+        guard let value = wrappedElement.getValue(.role) as? String else { return nil }
+        return NSAccessibility.Role(rawValue: value)
     }
     
     private var subrole: NSAccessibility.Subrole? {
@@ -242,15 +258,22 @@ class AccessibilityElement {
         guard
             let windowElement,
             case let windowFrame = windowElement.frame,
-            windowFrame != .null,
-            let closeButtonFrame = windowElement.getChildElement(.closeButton)?.frame,
-            closeButtonFrame != .null
+            windowFrame != .null
         else {
             return nil
         }
-        let gap = closeButtonFrame.minY - windowFrame.minY
-        let height = 2 * gap + closeButtonFrame.height
-        return CGRect(origin: windowFrame.origin, size: CGSize(width: windowFrame.width, height: height))
+        // Try to calculate title bar frame using close button (standard macOS windows)
+        if let closeButtonFrame = windowElement.getChildElement(.closeButton)?.frame,
+           closeButtonFrame != .null {
+            let gap = closeButtonFrame.minY - windowFrame.minY
+            let height = 2 * gap + closeButtonFrame.height
+            return CGRect(origin: windowFrame.origin, size: CGSize(width: windowFrame.width, height: height))
+        }
+        // Fallback: Use standard macOS title bar height for apps without standard close button
+        // (e.g., Electron apps like VS Code that use custom window controls)
+        // Standard macOS title bar height is typically 22-28 points, use 28 to be safe
+        let standardTitleBarHeight: CGFloat = 28
+        return CGRect(origin: windowFrame.origin, size: CGSize(width: windowFrame.width, height: standardTitleBarHeight))
     }
     
     private var applicationElement: AccessibilityElement? {

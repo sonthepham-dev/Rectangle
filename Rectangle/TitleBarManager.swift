@@ -37,21 +37,60 @@ class TitleBarManager {
             event.eventNumber != lastEventNumber,
             TitleBarManager.systemSettingDisabled,
             let action = WindowAction(rawValue: Defaults.doubleClickTitleBar.value - 1),
-            case let location = NSEvent.mouseLocation.screenFlipped,
+            case let location = NSEvent.mouseLocation.screenFlipped
+        else {
+            if Logger.logging {
+                if event.type == .leftMouseUp && event.clickCount == 2 {
+                    Logger.log("TitleBar double-click: Failed initial guard checks (type: \(event.type.rawValue), clickCount: \(event.clickCount), eventNumber: \(event.eventNumber), lastEventNumber: \(lastEventNumber?.description ?? "nil"), systemSettingDisabled: \(TitleBarManager.systemSettingDisabled))")
+                }
+            }
+            return
+        }
+        
+        guard
             let element = AccessibilityElement(location)?.getSelfOrChildElementRecursively(location),
             let windowElement = element.windowElement,
             var titleBarFrame = windowElement.titleBarFrame
         else {
+            if Logger.logging {
+                let appName = element?.pid.flatMap { NSRunningApplication(processIdentifier: $0)?.localizedName } ?? "unknown"
+                let elementRole = element?.role?.rawValue ?? "nil"
+                Logger.log("TitleBar double-click: Failed to get element/window/titleBarFrame (app: \(appName), element role: \(elementRole), location: \(location))")
+            }
             return
         }
+        
         lastEventNumber = event.eventNumber
         if let toolbarFrame = windowElement.getChildElement(.toolbar)?.frame, toolbarFrame != .null {
             titleBarFrame = titleBarFrame.union(toolbarFrame)
         }
-        guard
-            titleBarFrame.contains(location),
-            element.isWindow == true || element.isToolbar == true || element.isGroup == true || element.isTabGroup == true || element.isStaticText == true
-        else {
+        
+        // Check if click is within title bar frame
+        guard titleBarFrame.contains(location) else {
+            if Logger.logging {
+                let appName = element.pid.flatMap { NSRunningApplication(processIdentifier: $0)?.localizedName } ?? "unknown"
+                Logger.log("TitleBar double-click: Location not in titleBar (app: \(appName), location: \(location), titleBarFrame: \(titleBarFrame))")
+            }
+            return
+        }
+        
+        // Check element type - allow common title bar element types
+        // VS Code and other Electron apps may use custom UI elements with different roles
+        let isValidElementType = element.isWindow == true 
+            || element.isToolbar == true 
+            || element.isGroup == true 
+            || element.isTabGroup == true 
+            || element.isStaticText == true
+            || element.isButton == true  // Custom buttons in title bar
+            || element.isImage == true   // Icons/images in title bar
+            || element.isUnknown == true  // Custom UI elements (common in Electron apps)
+        
+        guard isValidElementType else {
+            if Logger.logging {
+                let appName = element.pid.flatMap { NSRunningApplication(processIdentifier: $0)?.localizedName } ?? "unknown"
+                let elementRole = element.role?.rawValue ?? "nil"
+                Logger.log("TitleBar double-click: Failed element type check (app: \(appName), element role: \(elementRole), isWindow: \(element.isWindow?.description ?? "nil"), isToolbar: \(element.isToolbar?.description ?? "nil"), isGroup: \(element.isGroup?.description ?? "nil"), isTabGroup: \(element.isTabGroup?.description ?? "nil"), isStaticText: \(element.isStaticText?.description ?? "nil"), isButton: \(element.isButton?.description ?? "nil"), isImage: \(element.isImage?.description ?? "nil"), isUnknown: \(element.isUnknown?.description ?? "nil"), location: \(location), titleBarFrame: \(titleBarFrame))")
+            }
             return
         }
         if let ignoredApps = Defaults.doubleClickTitleBarIgnoredApps.typedValue,
