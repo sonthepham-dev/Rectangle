@@ -62,7 +62,21 @@ class TitleBarManager {
         
         lastEventNumber = event.eventNumber
         if let toolbarFrame = windowElement.getChildElement(.toolbar)?.frame, toolbarFrame != .null {
-            titleBarFrame = titleBarFrame.union(toolbarFrame)
+            // Only include toolbars that are at the top of the window (near the title bar).
+            // Status bars at the bottom of windows (like in VSCode) are also exposed as toolbars
+            // but should not be included in the title bar detection area.
+            let currentWindowFrame = windowElement.frame
+            if currentWindowFrame != .null {
+                let windowHeight = currentWindowFrame.height
+                // In screenFlipped coordinates, maxY is the top edge
+                // Check if toolbar's top edge is near the window's top edge (within upper 30%)
+                let distanceFromTop = currentWindowFrame.maxY - toolbarFrame.maxY
+                // Consider toolbar as "top toolbar" if it's within the upper 30% of the window
+                // This prevents status bars at the bottom from being incorrectly included
+                if distanceFromTop >= 0 && distanceFromTop < windowHeight * 0.3 {
+                    titleBarFrame = titleBarFrame.union(toolbarFrame)
+                }
+            }
         }
         
         // Check if click is within title bar frame
