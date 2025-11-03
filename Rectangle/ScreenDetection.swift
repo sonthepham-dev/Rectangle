@@ -33,6 +33,24 @@ class ScreenDetection {
         return UsableScreens(currentScreen: sourceScreen, adjacentScreens: adjacentScreens, numScreens: screens.count, screensOrdered: screensOrdered)
     }
 
+    func detectScreensAtCursor() -> UsableScreens? {
+        let screens = NSScreen.screens
+        if screens.count == 1 {
+            return detectScreens(using: nil)
+        }
+
+        let screensOrdered = order(screens: screens)
+
+        guard let cursorScreen = screens.first(where: { $0.frame.contains(NSEvent.mouseLocation)})
+        else {
+            return detectScreens(using: nil)
+        }
+
+        let adjacentScreens = adjacent(toFrameOfScreen: cursorScreen.frame, screens: screensOrdered)
+
+        return UsableScreens(currentScreen: cursorScreen, adjacentScreens: adjacentScreens, numScreens: screens.count, screensOrdered: screensOrdered)
+    }
+
     func screenContaining(_ rect: CGRect, screens: [NSScreen]) -> NSScreen? {
         var result: NSScreen? = NSScreen.main
         var largestPercentageOfRectWithinFrameOfScreen: CGFloat = 0.0
@@ -90,13 +108,23 @@ class ScreenDetection {
     }
 
     func order(screens: [NSScreen]) -> [NSScreen] {
-        let sortedByY = screens.sorted(by: { screen1, screen2 in
-            return screen1.frame.origin.y < screen2.frame.origin.y
+        if Defaults.screensOrderedByX.userEnabled {
+            let screensOrderedByX = screens.sorted(by: { screen1, screen2 in
+                return screen1.frame.origin.x < screen2.frame.origin.x
+            })
+            return screensOrderedByX
+        }
+        
+        let sortedScreens = screens.sorted(by: { screen1, screen2 in
+            if screen2.frame.maxY <= screen1.frame.minY {
+                return true
+            }
+            if screen1.frame.maxY <= screen2.frame.minY {
+                return false
+            }
+            return screen1.frame.minX < screen2.frame.minX
         })
-        let alsoSortedByX = sortedByY.sorted(by: { screen1, screen2 in
-            return screen1.frame.origin.x < screen2.frame.origin.x
-        })
-        return alsoSortedByX
+        return sortedScreens
     }
     
     private func computeAreaOfRect(rect: CGRect) -> CGFloat {
@@ -145,10 +173,11 @@ extension NSScreen {
         }
         
         if !ignoreTodo, Defaults.todo.userEnabled, Defaults.todoMode.enabled, TodoManager.todoScreen == self, TodoManager.hasTodoWindow() {
+            let sidebarWidth = TodoManager.getSidebarWidth(visibleFrameWidth: visibleFrame.width)
+            newFrame.size.width -= sidebarWidth
             if Defaults.todoSidebarSide.value == .left {
-                newFrame.origin.x += Defaults.todoSidebarWidth.cgFloat
+                newFrame.origin.x += sidebarWidth
             }
-            newFrame.size.width -= Defaults.todoSidebarWidth.cgFloat
         }
 
         if Defaults.screenEdgeGapsOnMainScreenOnly.enabled, self != NSScreen.screens.first {

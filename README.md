@@ -4,7 +4,7 @@
 
 Rectangle is a window management app based on Spectacle, written in Swift.
 
-![Screenshot](https://user-images.githubusercontent.com/13651296/183785536-a67a2e2a-7c55-4c19-9bf8-482e734b1632.png)
+<img width="962" height="886" alt="image" src="https://github.com/user-attachments/assets/e8d88e5f-7d4f-43bc-a82e-146c42f92d68" />
 
 ## System Requirements
 
@@ -37,8 +37,12 @@ Drag a window to the edge of the screen. When the mouse cursor reaches the edge 
 
 ### Ignore an app
 
+Ignoring an app means that when the app is frontmost, keyboard shortcuts are un-registered from macOS. When the app is no longer frontmost, keyboard shortcuts are re-registered with macOS. This is useful for apps that have the same shortcuts like Rectangle and you do not want to change them.
+
 1. Focus the app that you want to ignore (make a window from that app frontmost).
 1. Open the Rectangle menu and select "Ignore app"
+
+To un-ignore an app that you have selected to ignore, simply bring that app frontmost again, open the Rectangle menu, and deselect "Ignore".
 
 ## Execute an action by URL
 
@@ -65,7 +69,7 @@ See [TerminalCommands.md](TerminalCommands.md)
 
 ## Differences with Spectacle
 
-* Rectangle uses [MASShortcut](https://github.com/shpakovski/MASShortcut) for keyboard shortcut recording. Spectacle used its own shortcut recorder.
+* Rectangle uses [MASShortcut](https://github.com/rxhanson/MASShortcut) for keyboard shortcut recording. Spectacle used its own shortcut recorder.
 * Rectangle has additional window actions: move windows to each edge without resizing, maximize only the height of a window, almost maximizing a window.
 * Next/prev screen thirds is replaced with explicitly first third, first two thirds, center third, last two thirds, and last third. Screen orientation is taken into account, as in first third will be left third on landscape and top third on portrait.
   * You can however emulate Spectacle's third cycling using first and last third actions. So, if you repeatedly execute first third, it will cycle through thirds (first, center, last) and vice-versa with the last third.
@@ -167,9 +171,13 @@ brew uninstall --zap rectangle
 
 Logic from Rectangle is used in the [Multitouch](https://multitouch.app) app. The [Rectangle Pro](https://rectangleapp.com/pro) app is entirely built on top of Rectangle. If you contribute significant code or localizations that get merged into Rectangle, send me an email for a free license of Multitouch or Rectangle Pro. Contributors to Sparkle, MASShortcut, or Spectacle can also receive free Multitouch or Rectangle Pro licenses.
 
+### Contributing additional sizes and positions
+
+Rectangle's UI is intentionally simple. If you want to add a size and position that's not in the Shortcuts tab, then you can now add them into the "Extra Shortcuts" section accessed via the ellipsis button at the bottom of the General tab.
+
 ### Localization
 
-If you would like to contribute to localization, all of the translations are held in the Main.strings per language. If you would like to add a localization but one doesn't currently exist and you don't know how to create one, create an issue and a translation file can be initialized.
+If you would like to contribute to localization, all of the translations are held in the Main.strings.
 
 Pull requests for new localizations or improvements on existing localizations are welcome.
 
@@ -177,4 +185,14 @@ Pull requests for new localizations or improvements on existing localizations ar
 
 Rectangle uses [Swift Package Manager](https://www.swift.org/package-manager/) to install Sparkle and MASShortcut.
 
-The original repository for MASShortcut was archived, so Rectangle uses my [fork](https://github.com/rxhanson/MASShortcut). If you want to make any changes that involve MASShortcut, please make a pull request on my fork.
+The original repository for MASShortcut was archived, so Rectangle uses my [fork](https://github.com/rxhanson/MASShortcut). If you want to make any changes that involve MASShortcut, please make a pull request on my fork. 
+
+Due to the addition of the Liquid Glass icon with a fallback for older versions of macOS, there will be a build failure on macOS versions < 26. You can delete the "Asset Catalog Other Flags" to build locally on versions < 26 (but don't check that change in if you create a pull request).
+
+## Credits
+
+As mentioned above, Rectangle uses a forked version of [MASShortcut](https://github.com/rxhanson/MASShortcut), which still works great, and it uses [Sparkle](https://sparkle-project.org) for updates. 
+
+The Big Sur variant of the Rectangle app icon was created by Giovanni Maria Cusaro (@gmcusaro). The Liquid Glass variant of the app icon was created by [Alexander Käßner](https://www.alexkaessner.de) (@alexkaessner).
+
+And of course, there's been a lot of community contributions over the years :)

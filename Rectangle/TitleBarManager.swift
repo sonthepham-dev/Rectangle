@@ -61,8 +61,20 @@ class TitleBarManager {
         }
         
         lastEventNumber = event.eventNumber
+        
+        var bundleIdentifier: String?
+        if let pid = element.pid {
+            bundleIdentifier = NSRunningApplication(processIdentifier: pid)?.bundleIdentifier
+        }
+        
         if let toolbarFrame = windowElement.getChildElement(.toolbar)?.frame, toolbarFrame != .null {
-            titleBarFrame = titleBarFrame.union(toolbarFrame)
+            if let bundleIdentifier,
+               let toolbarIgnoredIds = Defaults.doubleClickToolBarIgnoredApps.typedValue,
+               toolbarIgnoredIds.contains(bundleIdentifier) {
+               // don't add the toolbar frame to the title bar
+            } else {
+                titleBarFrame = titleBarFrame.union(toolbarFrame)
+            }
         }
         
         // Check if click is within title bar frame
@@ -93,11 +105,9 @@ class TitleBarManager {
             }
             return
         }
-        if let ignoredApps = Defaults.doubleClickTitleBarIgnoredApps.typedValue,
-            !ignoredApps.isEmpty,
-            let pid = element.pid,
-            let appId = NSRunningApplication(processIdentifier: pid)?.bundleIdentifier,
-            ignoredApps.contains(appId) {
+        if let bundleIdentifier,
+            let ignoredApps = Defaults.doubleClickTitleBarIgnoredApps.typedValue,
+            ignoredApps.contains(bundleIdentifier) {
             return
         }
         if Defaults.doubleClickTitleBarRestore.enabled != false,

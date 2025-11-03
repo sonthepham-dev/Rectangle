@@ -29,9 +29,11 @@ class Defaults {
     static let resizeOnDirectionalMove = BoolDefault(key: "resizeOnDirectionalMove")
     static let ignoredSnapAreas = IntDefault(key: "ignoredSnapAreas")
     static let traverseSingleScreen = OptionalBoolDefault(key: "traverseSingleScreen")
+    static let useCursorScreenDetection = BoolDefault(key: "useCursorScreenDetection")
     static let minimumWindowWidth = FloatDefault(key: "minimumWindowWidth")
     static let minimumWindowHeight = FloatDefault(key: "minimumWindowHeight")
     static let sizeOffset = FloatDefault(key: "sizeOffset")
+    static let widthStepSize = FloatDefault(key: "widthStepSize", defaultValue: 30)
     static let unsnapRestore = OptionalBoolDefault(key: "unsnapRestore")
     static let curtainChangeSize = OptionalBoolDefault(key: "curtainChangeSize")
     static let relaunchOpensMenu = BoolDefault(key: "relaunchOpensMenu")
@@ -43,6 +45,7 @@ class Defaults {
     static let screenEdgeGapsOnMainScreenOnly = BoolDefault(key: "screenEdgeGapsOnMainScreenOnly")
     static let screenEdgeGapTopNotch = FloatDefault(key: "screenEdgeGapTopNotch", defaultValue: 0)
     static let lastVersion = StringDefault(key: "lastVersion")
+    static let installVersion = StringDefault(key: "installVersion")
     static let showAllActionsInMenu = OptionalBoolDefault(key: "showAllActionsInMenu")
     static var SUHasLaunchedBefore: Bool { UserDefaults.standard.bool(forKey: "SUHasLaunchedBefore") }
     static let footprintAlpha = FloatDefault(key: "footprintAlpha", defaultValue: 0.3)
@@ -54,6 +57,7 @@ class Defaults {
     static let todoMode = BoolDefault(key: "todoMode")
     static let todoApplication = StringDefault(key: "todoApplication")
     static let todoSidebarWidth = FloatDefault(key: "todoSidebarWidth", defaultValue: 400)
+    static let todoSidebarWidthUnit = IntEnumDefault<TodoSidebarWidthUnit>(key: "todoSidebarWidthUnit", defaultValue: .pixels)
     static let todoSidebarSide = IntEnumDefault<TodoSidebarSide>(key: "todoSidebarSide", defaultValue: .right)
     static let snapModifiers = IntDefault(key: "snapModifiers")
     static let attemptMatchOnNextPrevDisplay = OptionalBoolDefault(key: "attemptMatchOnNextPrevDisplay")
@@ -86,10 +90,12 @@ class Defaults {
     static let doubleClickTitleBar = IntDefault(key: "doubleClickTitleBar")
     static let doubleClickTitleBarRestore = OptionalBoolDefault(key: "doubleClickTitleBarRestore")
     static let doubleClickTitleBarIgnoredApps = JSONDefault<[String]>(key: "doubleClickTitleBarIgnoredApps")
+    static let doubleClickToolBarIgnoredApps = JSONDefault<Set<String>>(key: "doubleClickTitleBarIgnoredApps", defaultValue: ["epp.package.java"])
     static let ignoreDragSnapToo = OptionalBoolDefault(key: "ignoreDragSnapToo")
     static let systemWideMouseDown = OptionalBoolDefault(key: "systemWideMouseDown")
     static let systemWideMouseDownApps = JSONDefault<Set<String>>(key:"systemWideMouseDownApps", defaultValue: Set<String>(["org.languagetool.desktop", "com.microsoft.teams2"]))
     static let internalTilingNotified = BoolDefault(key: "internalTilingNotified")
+    static let screensOrderedByX = OptionalBoolDefault(key: "screensOrderedByX")
     
     static var array: [Default] = [
         launchOnLogin,
@@ -115,6 +121,7 @@ class Defaults {
         minimumWindowWidth,
         minimumWindowHeight,
         sizeOffset,
+        widthStepSize,
         unsnapRestore,
         curtainChangeSize,
         relaunchOpensMenu,
@@ -169,7 +176,8 @@ class Defaults {
         doubleClickTitleBarIgnoredApps,
         ignoreDragSnapToo,
         systemWideMouseDown,
-        systemWideMouseDownApps
+        systemWideMouseDownApps,
+        screensOrderedByX
     ]
 }
 

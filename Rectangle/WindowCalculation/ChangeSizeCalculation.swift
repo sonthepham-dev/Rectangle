@@ -14,6 +14,10 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
     let sizeOffsetAbs: CGFloat
     let curtainChangeSize = Defaults.curtainChangeSize.enabled != false
 
+    var widthOffsetAbs: CGFloat {
+        CGFloat(Defaults.widthStepSize.value)
+    }
+
     override init() {
         let windowGapSize = Defaults.gapSize.value
         screenEdgeGapSize = (windowGapSize <= 0) ? 5.0 : CGFloat(windowGapSize)
@@ -28,10 +32,14 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
 
         let sizeOffset: CGFloat
         switch params.action {
-            case .larger, .largerWidth:
+            case .larger, .largerHeight:
                 sizeOffset = sizeOffsetAbs
-            case .smaller, .smallerWidth:
+            case .smaller, .smallerHeight:
                 sizeOffset = -sizeOffsetAbs
+            case .largerWidth:
+                sizeOffset = widthOffsetAbs
+            case .smallerWidth:
+                sizeOffset = -widthOffsetAbs
             default:
                 sizeOffset = 0
         }
@@ -62,11 +70,11 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
 
         // Calculate Height
 
-        if [.larger, .smaller].contains(params.action) {
+        if [.larger, .smaller, .largerHeight, .smallerHeight].contains(params.action) {
             resizedWindowRect.size.height = resizedWindowRect.height + sizeOffset
             resizedWindowRect.origin.y = resizedWindowRect.minY - floor(sizeOffset / 2.0)
 
-            if curtainChangeSize {
+            if curtainChangeSize, params.action != .smallerHeight {
                 resizedWindowRect = againstTopAndBottomScreenEdges(
                     originalWindowRect: window.rect,
                     resizedWindowRect: resizedWindowRect,
@@ -88,7 +96,7 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
             resizedWindowRect.origin.y = params.window.rect.origin.y - floor(sizeOffset / 2.0)
         }
         
-        if [.smaller, .smallerWidth].contains(params.action), resizedWindowRectIsTooSmall(windowRect: resizedWindowRect, visibleFrameOfScreen: visibleFrameOfScreen) {
+        if [.smaller, .smallerWidth, .smallerHeight].contains(params.action), resizedWindowRectIsTooSmall(windowRect: resizedWindowRect, visibleFrameOfScreen: visibleFrameOfScreen) {
             resizedWindowRect = window.rect
         }
 

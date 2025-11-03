@@ -3278,7 +3278,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deux tiers gauches"
+            "value" : "Deux tiers du haut"
           }
         },
         "id" : {
@@ -4046,7 +4046,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle에 관하여"
+            "value" : "Rectangle 정보"
           }
         },
         "lt" : {
@@ -4149,6 +4149,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關於Rectangle"
+          }
+        }
+      }
+    },
+    "5LN-YU-Bwy.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"px\"; ObjectID = \"5LN-YU-Bwy\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "px"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "px"
           }
         }
       }
@@ -5120,7 +5138,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo 어플리케이션 폭"
+            "value" : "Todo 앱 폭"
           }
         },
         "lt" : {
@@ -6254,7 +6272,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Rectangle 메뉴에서, Todo 모드를 활성화 시킵니다"
+            "value" : "3. Rectangle 메뉴에서, Todo 모드를 켭니다"
           }
         },
         "lt" : {
@@ -6746,7 +6764,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deux tiers droits"
+            "value" : "Deux tiers du bas"
           }
         },
         "id" : {
@@ -8643,6 +8661,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用默认"
+          }
+        }
+      }
+    },
+    "AgV-lP-6XB.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"%\"; ObjectID = \"AgV-lP-6XB\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%"
           }
         }
       }
@@ -11935,7 +11971,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Conflict with system setting"
+            "value" : "시스템 설정과 충돌"
           }
         },
         "lt" : {
@@ -12407,7 +12443,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiers droit"
+            "value" : "Tiers du bas"
           }
         },
         "id" : {
@@ -12534,6 +12570,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "右１／３"
+          }
+        }
+      }
+    },
+    "CUR-SD-CEL.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Use cursor position for screen detection\"; ObjectID = \"CUR-SD-CEL\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Use cursor position for screen detection"
           }
         }
       }
@@ -13723,7 +13771,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Right"
+            "value" : "오른쪽"
           }
         },
         "lt" : {
@@ -13909,7 +13957,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toggle Todo"
+            "value" : "Todo 켜기/끄기"
           }
         },
         "lt" : {
@@ -16144,6 +16192,18 @@
         }
       }
     },
+    "Ext-Set-Cel.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"⋯\"; ObjectID = \"Ext-Set-Cel\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "⋯"
+          }
+        }
+      }
+    },
     "F2S-fz-NVQ.title" : {
       "comment" : "Class = \"NSMenu\"; title = \"Help\"; ObjectID = \"F2S-fz-NVQ\";",
       "extractionState" : "extracted_with_value",
@@ -16702,6 +16762,17 @@
         }
       }
     },
+    "Extra Shortcuts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Extra Shortcuts"
+          }
+        }
+      }
+    },
     "F12-EV-Lfz.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"First Third\"; ObjectID = \"F12-EV-Lfz\";",
       "extractionState" : "extracted_with_value",
@@ -16757,7 +16828,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiers gauche"
+            "value" : "Tiers du haut"
           }
         },
         "id" : {
@@ -17225,7 +17296,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "선택한 어플리케이션을 메인 화면 오른쪽에 항상 표시되도록 합니다"
+            "value" : "선택한 응용 프로그램을 메인 화면 오른쪽에 항상 표시합니다"
           }
         },
         "lt" : {
@@ -18661,7 +18732,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Reflow Todo"
+            "value" : "Todo 재배치"
           }
         },
         "lt" : {
@@ -19895,186 +19966,186 @@
       }
     },
     "gtf-PD-IHm.label" : {
-      "comment" : "Class = \"NSTabViewItem\"; label = \"Settings\"; ObjectID = \"gtf-PD-IHm\";",
+      "comment" : "Class = \"NSTabViewItem\"; label = \"General\"; ObjectID = \"gtf-PD-IHm\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Réglages"
           }
         },
         "ca" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Configuració"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Configuració"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nastavení"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Einstellungen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Settings"
+            "value" : "General"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ajustes"
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ajustes"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Réglages"
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pengaturan"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Impostazioni"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "設定"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "설정"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nustatymai"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Innstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Settings"
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Innstillingar"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ustawienia"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Configurações"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Definições"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Setări"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Настройки"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Nastavenia"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Inställningar"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ayarlar"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Налаштування"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cài đặt"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "設定"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "設定"
           }
         }
@@ -21171,7 +21242,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Double-click window title bar to maximize/restore"
+            "value" : "윈도우 제목 막대를 두 번 클릭해 확대/축소"
           }
         },
         "lt" : {
@@ -22438,7 +22509,7 @@
     },
     "HVG-6v-eJH.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"px\"; ObjectID = \"HVG-6v-eJH\";",
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -27482,6 +27553,17 @@
         }
       }
     },
+    "Larger Width" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Larger Width"
+          }
+        }
+      }
+    },
     "Lbh-J2-qVU.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"\\tLeft to Right\"; ObjectID = \"Lbh-J2-qVU\";",
       "extractionState" : "manual",
@@ -29427,7 +29509,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo 모드에 대해"
+            "value" : "Todo 모드 정보"
           }
         },
         "lt" : {
@@ -30433,7 +30515,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Left"
+            "value" : "왼쪽"
           }
         },
         "lt" : {
@@ -30805,7 +30887,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "선택한 어플리케이션을 메인 화면 오른쪽에 항상 표시되도록 합니다"
+            "value" : "선택한 응용 프로그램을 메인 화면 오른쪽에 항상 표시합니다"
           }
         },
         "lt" : {
@@ -32203,7 +32285,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo side"
+            "value" : "Todo 위치"
           }
         },
         "lt" : {
@@ -33270,6 +33352,173 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟系統設定"
+          }
+        }
+      }
+    },
+    "oSu-n4-8Yu.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Center Two Thirds\"; ObjectID = \"oSu-n4-8Yu\";",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الثلثان في الوسط"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dos terços centrals"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Prostřední dvě třetiny"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zentrierte zwei Drittel"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Center Two Thirds"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Centre Two Thirds"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dos tercios centrales"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dos tercios al centro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Deux tiers centraux"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dua Pertiga Tengah"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Due terzi al centro"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "中央の3分の2"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가운데 2/3"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Midtre to tredeler"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Middelste twee derde"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Środkowe dwie trzecie"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dois Terços Centrais"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Două treimi pe centru"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Центральные две трети"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Stredné dve tretiny"
+          }
+        },
+        "sv-SE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mellersta två tredjedelar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ortadaki Üçte İki"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Центральні дві третини"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hai phần ba ở giữa"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中间２／３"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中間２／３"
+          }
+        },
+        "zh-Hant-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中間２／３"
           }
         }
       }
@@ -36309,7 +36558,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "1. Todo 어플리케이션을 맨 앞에 위치시킵니다"
+            "value" : "1. Todo 응용 프로그램을 맨 앞에 둡니다"
           }
         },
         "lt" : {
@@ -38952,6 +39201,17 @@
         }
       }
     },
+    "Smaller Width" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Smaller Width"
+          }
+        }
+      }
+    },
     "snW-S8-Cw5.title" : {
       "comment" : "Class = \"NSMenuItem\"; title = \"Show Toolbar\"; ObjectID = \"snW-S8-Cw5\";",
       "extractionState" : "manual",
@@ -39091,186 +39351,186 @@
       }
     },
     "STb-JK-oB1.title" : {
-      "comment" : "Class = \"NSWindow\"; title = \"Rectangle Preferences\"; ObjectID = \"STb-JK-oB1\";",
+      "comment" : "Class = \"NSWindow\"; title = \"Rectangle Settings\"; ObjectID = \"STb-JK-oB1\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "تفضيلات المستطيل"
           }
         },
         "ca" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferències de Rectangle"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferències de Rectangle"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle předvolby"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle-Einstellungen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle Preferences"
+            "value" : "Rectangle Settings"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferencias de Rectangle"
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferencias de Rectangle"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Préférences Rectangle"
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferensi Rectangle"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferenze Rectangle"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle環境設定"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle 환경설정"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle nustatymai"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle-innstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Voorkeuren Rectangle"
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle-innstillingar"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferencje Rectangle"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferências do Rectangle"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferências do Rectangle"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Preferințe Rectangle"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Настройки Rectangle"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle predvoľby"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle-inställningar"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle Tercihleri"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Налаштування Rectangle"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cài đặt của Rectangle"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle 偏好设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle 偏好設定"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rectangle偏好設定"
           }
         }
@@ -40790,7 +41050,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "Rectangle이 제목 막대 두 번 클릭 기능을 제어하려면, 해당하는 macOS 설정을 꺼야 합니다."
           }
         },
         "lt" : {
@@ -40915,7 +41175,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "다시 켜려면, 시스템 설정 → 데스크탑 및 Dock → 윈도우로 이동하세요"
+            "value" : "다시 켜려면, 시스템 설정 → 데스크탑 및 Dock → 윈도우로 이동합니다"
           }
         },
         "sk" : {
@@ -42554,7 +42814,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Use as Todo Window"
+            "value" : "Todo 윈도우로 사용"
           }
         },
         "lt" : {
@@ -42822,186 +43082,186 @@
       }
     },
     "uw2-9W-2jq.label" : {
-      "comment" : "Class = \"NSTabViewItem\"; label = \"Keyboard Shortcuts\"; ObjectID = \"uw2-9W-2jq\";",
+      "comment" : "Class = \"NSTabViewItem\"; label = \"Shortcuts\"; ObjectID = \"uw2-9W-2jq\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Raccourcis clavier"
           }
         },
         "ca" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Dreceres de teclat"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Dreceres de teclat"
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Klávesové zkratky"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Tastaturkurzbefehle"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Keyboard Shortcuts"
+            "value" : "Shortcuts"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Atajos de teclado"
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Atajos de teclado"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Raccourcis clavier"
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pintasan Papan Ketik"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Abbreviazioni da tastiera"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "キーボードショートカット"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "키보드 단축키"
           }
         },
         "lt" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Karštieji klavišai"
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Tastatursnarveger"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Keyboard Shortcuts"
           }
         },
         "nn" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Tastatursnarvegar"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Skróty klawiaturowe"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Atalhos de teclado"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Atalhos de Teclado"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Scurtături"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Горячие клавиши"
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Klávesové skratky"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Tangentbordsgenvägar"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Klavye Kısayolları"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Комбінації клавіш"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Phím tắt"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "键盘快捷键"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "鍵盤快速鍵"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "鍵盤快捷鍵"
           }
         }
@@ -44747,6 +45007,198 @@
         }
       }
     },
+    "Vph-Z0-euH.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Center Three Fourths\"; ObjectID = \"Vph-Z0-euH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسط ثلاثة أرباع"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres quarts centrals"
+          }
+        },
+        "ca-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres quarts centrals"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Střední tři čtvrtiny"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittlere drei Viertel"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Center Three Fourths"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Centre Three Quarters"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres cuartos centrales"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres cuartos centrales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trois quarts centraux"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiga Perempat Tengah"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tre quarti centrali"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3/4にして中央揃え"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중앙 3/4"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vidurinės trys ketvirtys"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Midterste tre fjerdedeler"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Middelste drie kwart"
+          }
+        },
+        "nn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Midtre tre fjerdedelar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Środkowe trzy czwarte"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Três quartos centrais"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Três Quartos Centrais"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trei Sferturi Centrale"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Центральные три четверти"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stredné tri štvrtiny"
+          }
+        },
+        "sv-SE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittersta tre fjärdedelar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orta Üç Çeyrek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Центральні три чверті"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3/4 ở giữa"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中间３／４"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中間３／４"
+          }
+        },
+        "zh-Hant-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中間３／４"
+          }
+        }
+      }
+    },
     "w0m-vy-SC9.title" : {
       "comment" : "Class = \"NSMenu\"; title = \"Ligatures\"; ObjectID = \"w0m-vy-SC9\";",
       "extractionState" : "manual",
@@ -45577,6 +46029,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "貼上並符合樣式"
+          }
+        }
+      }
+    },
+    "Width Step (px)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Width Step (px)"
           }
         }
       }
@@ -46542,7 +47005,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spectacle을 선택하여도 반복되는 단축키에서 1/2, 2/3, 1/3 창 넓이를 순환할 것입니다"
+            "value" : "Spectacle을 선택하여도 단축키를 반복하면 1/2, 2/3, 1/3 창 넓이를 순환합니다"
           }
         },
         "lt" : {
@@ -49404,7 +49867,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo 모드에 대해"
+            "value" : "Todo 모드 정보"
           }
         },
         "lt" : {
